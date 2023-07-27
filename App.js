@@ -7,9 +7,10 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import HomeScreen from './HomeScreen';
 import SearchScreen from './SearchScreen';
-import WishlistScreen from './WishlistScreen'; // Added WishlistScreen
+
 import CartScreen from './CartScreen';
 import AccountScreen from './AccountScreen';
+import CategoriesScreen from './CategoriesScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -25,7 +26,7 @@ const App = () => {
               iconName = focused ? 'home' : 'home-outline';
             } else if (route.name === 'Search') {
               iconName = focused ? 'search' : 'search-outline';
-            } else if (route.name === 'Wishlist') {
+            } else if (route.name === 'Categories') {
               iconName = focused ? 'heart' : 'heart-outline';
             } else if (route.name === 'Cart') {
               iconName = focused ? 'cart' : 'cart-outline';
@@ -49,7 +50,7 @@ const App = () => {
         })}
       >
         <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Wishlist" component={WishlistScreen} />
+        <Tab.Screen name="Categories" component={CategoriesScreen} />
         <Tab.Screen name="Search" component={SearchScreen} />
        
         <Tab.Screen name="Cart" component={CartScreen} />
